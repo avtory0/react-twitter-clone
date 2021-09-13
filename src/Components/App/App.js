@@ -3,6 +3,10 @@ import React from "react";
 import AppHeader from "../App-header/App-header";
 import SearchPanel from "../Search-panel/Search-panel";
 import PostStatusFilter from "../Post-status-filter/Post-status-filter";
+import PostList from "../Post-list/Post-list";
+import PostAddForm from "../Post-add-form/Post-add-form";
+
+import "./app.css"
 
 const App = () => {
     return (
@@ -12,6 +16,8 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
+            <PostList/>
+            <PostAddForm/>
         </div>
     )
 }
