@@ -3,7 +3,7 @@ import React from "react"
 import "./post-list.css"
 import PostListItem from "../Post-list-item/Post-list-item";
 
-const PostList = ({posts, onDelete}) => {
+const PostList = ({posts, onDelete, onToggleImportant, onToggleLike}) => {
 
     const elements = posts.map((item) => {
         if(typeof item === 'object') {
@@ -15,7 +15,9 @@ const PostList = ({posts, onDelete}) => {
                         important={item.important}/> */}
 
                     <PostListItem {...itemProps}
-                    onDelete={() => onDelete(id)}/>
+                    onDelete={() => onDelete(id)}
+                    onToggleImportant={() => onToggleImportant(id)}
+                    onToggleLike={() => onToggleLike(id)}/>
                 </li>
             )
         }
